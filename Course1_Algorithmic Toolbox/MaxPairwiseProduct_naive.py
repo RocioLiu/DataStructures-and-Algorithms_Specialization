@@ -8,3 +8,13 @@ for i in range(n):
 
 print(product)
 
+
+# Pack it as a function to be called in StressTest.py
+def MaxPairwiseProductNaive(a):
+    product = 0
+    for i in range(len(a)):
+        for j in range(i + 1, len(a)):
+            product = max(product, a[i] * a[j])
+
+    return product
+
