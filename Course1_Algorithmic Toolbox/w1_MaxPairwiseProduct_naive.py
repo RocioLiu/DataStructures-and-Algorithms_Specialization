@@ -9,7 +9,7 @@ for i in range(n):
 print(product)
 
 
-# Pack it as a function to be called in StressTest.py
+# Pack it as a function to be called in w1_StressTest.py
 def MaxPairwiseProductNaive(a):
     product = 0
     for i in range(len(a)):

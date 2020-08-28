@@ -19,7 +19,7 @@ for i in range(1, len(a)):
 print(a[index1] * a[index2])
 
 
-# Pack it as a function to be called in StressTest.py
+# Pack it as a function to be called in w1_StressTest.py
 def MaxPairwiseProductFast(a):
     index1 = 0
     for i in range(1, len(a)):
