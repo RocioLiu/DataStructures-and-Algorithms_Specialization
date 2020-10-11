@@ -20,9 +20,16 @@ def get_optimal_value(capacity, weights, values):
     for i in range(n):
         unit_value.append(values[i]/weights[i])
 
-    unit_value = sorted(unit_value, reverse=True)
-
-
+    #unit_value = sorted(unit_value, reverse=True)
+    unit_value_sort_idx = [i[0] for i in sorted(enumerate(unit_value), key=lambda x:x[1], reverse=True)]
+    for i in range(len(weights)):
+        item_num = unit_value_sort_idx[i]
+        capacity -= weights[item_num]
+        if capacity >= 0:
+            value += values[item_num]
+        else:
+            value += unit_value[item_num]*(weights[item_num]+capacity)
+            break
 
     return value
 
