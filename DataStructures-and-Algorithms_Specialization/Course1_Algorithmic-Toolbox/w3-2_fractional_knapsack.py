@@ -13,11 +13,12 @@
 #   of the difference between the answer of your program and the optimal value should be at most 10**−3 .
 #   To ensure this, output your answer with at least four digits after the decimal point (otherwise your answer,
 #   while being computed correctly, can turn out to be wrong because of rounding issues).
+import sys
 
 def get_optimal_value(capacity, weights, values):
     value = 0
     unit_value = []
-    for i in range(n):
+    for i in range(len(weights)):
         unit_value.append(values[i]/weights[i])
 
     #unit_value = sorted(unit_value, reverse=True)
